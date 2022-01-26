@@ -37,11 +37,11 @@ public class GuessTheNumber {
                 }
                 
             }
-            System.out.println("Would you like to play again? (N or any key to continue)");
+            System.out.println("Would you like to play again? (N to quit or any key to continue)");
             String userAnswer = input.next();
             if (userAnswer.equals("n") || userAnswer.equals("N") || userAnswer.equals("No") || userAnswer.equals("no")) {
                 break;
-            }
+            } 
         }
         input.close();
         System.exit(0);
