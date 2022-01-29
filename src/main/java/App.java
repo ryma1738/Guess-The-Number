@@ -8,11 +8,10 @@ public class App {
         System.out.println("Hello, what is your name?");
         Scanner input = new Scanner(System.in);
         String userName = input.next();
-        Boolean exit = true;
-        while (exit) {
+        while (true) {
             System.out.println(userName + ", I am thinking of a number between 1 - 25.");
             Short i = 0;
-            int answer = (int) Math.round(Math.random() * 25);
+            int answer = (int) Math.round(Math.random() * 25); 
             while (true) {
                 try {
                     if (i == 6) {
@@ -34,9 +33,8 @@ public class App {
                 }
             }
             System.out.println("Would you like to play again? (N to quit or any key to continue)");
-            String userAnswer = input.next();
-            if (userAnswer.equals("n") || userAnswer.equals("N") || userAnswer.equals("No")
-                    || userAnswer.equals("no")) {
+            String userAnswer = input.next().toUpperCase();
+            if ( userAnswer.equals("N") || userAnswer.equals("NO")) {
                 break;
             }
         }
@@ -51,6 +49,5 @@ public class App {
         } else if (userGuess > answer) {
             return "You guess is too high.";
         } return "You guess is too low.";
-        
     }
 }
